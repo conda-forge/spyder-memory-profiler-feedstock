@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -30,8 +30,6 @@ test:
   # On Linux, importing requires an X server
   files:
     - test_import.py  # [linux]
-  commands:
-    - DISPLAY=localhost:1.0 xvfb-run -a bash -c 'python test_import.py'  # [linux]
   import:
     - spyder_memory_profiler  # [not linux]
 
