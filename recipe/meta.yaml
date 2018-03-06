@@ -30,7 +30,7 @@ test:
   # On Linux, importing requires an X server
   files:
     - test_import.py  # [linux]
-  import:
+  imports:
     - spyder_memory_profiler  # [not linux]
 
 about:
