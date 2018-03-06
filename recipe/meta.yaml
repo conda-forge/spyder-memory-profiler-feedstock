@@ -1,7 +1,7 @@
 {% set name = "spyder-memory-profiler" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 {% set hash_type = "sha256" %}
-{% set hash = "cdd2102e69ed3f30c49d31bfe1c6ce82c2c5cb6b26bb9733aae69fa377cd4d5f" %}
+{% set hash = "04c8a060bbd63a04d831aed2ad4fae48214e74a15ce923de0616d72e1d4d3e4f" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -30,7 +30,7 @@ test:
   # On Linux, importing requires an X server
   files:
     - test_import.py  # [linux]
-  import:
+  imports:
     - spyder_memory_profiler  # [not linux]
 
 about:
