@@ -24,7 +24,7 @@ requirements:
   run:
     - memory_profiler
     - python
-    - spyder >=3
+    - spyder >=4
 
 test:
   # On Linux, importing requires an X server
