@@ -1,7 +1,6 @@
 {% set name = "spyder-memory-profiler" %}
-{% set version = "0.2.0" %}
-{% set hash_type = "sha256" %}
-{% set hash = "d2fcb369c84e09b247514fc2ce608666124a04c2e05a71f7466bb26ca2c1169c" %}
+{% set version = "0.2.1" %}
+{% set hash = "49ee86d74dd05797788b722113db501912303739ac707aecdc585885ccd3c237" %}
 
 package:
   name: {{ name|lower }}
@@ -10,11 +9,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
